@@ -102,7 +102,7 @@ namespace CryptaTray
 
                 if (configException != null)
                 {
-                    FNLog.Error("Failed to detect Freenet installation.", configException);
+                    FNLog.Error("Failed to detect Crypta installation.", configException);
                     throw configException;
                 }
             }
@@ -187,16 +187,16 @@ namespace CryptaTray
                 switch (ex.NativeErrorCode)
                 {
                     case ERROR_FILE_NOT_FOUND:
-                        FNLog.Error("Cannot start Freenet: wrapper executable not found.");
+                        FNLog.Error("Cannot start Crypta: wrapper executable not found.");
                         OnCrashed(CrashType.WrapperFileNotFound);
                         return;
                     case ERROR_INSUFFICIENT_BUFFER:
                     case ERROR_ACCESS_DENIED:
-                        FNLog.Error("Cannot start Freenet: the file path is too long.");
+                        FNLog.Error("Cannot start Crypta: the file path is too long.");
                         OnCrashed(CrashType.PathTooLong);
                         return;
                     default:
-                        FNLog.ErrorException(ex, "Cannot start Freenet: Process.Start() gave an error code it is not documented as giving.");
+                        FNLog.ErrorException(ex, "Cannot start Crypta: Process.Start() gave an error code it is not documented as giving.");
                         throw;
                 }
             }
@@ -251,7 +251,7 @@ namespace CryptaTray
                  * it will use a default. It's not in the default wrapper.conf and is defined on
                  * the command line in run.sh.
                  */
-                PidFilename = "freenet.pid";
+                PidFilename = "Crypta.pid";
                 // wrapper.conf is relative to the wrapper's location.
                 var wrapperConfPath = Path.Combine(relativeTo, "wrapper", WrapperConfFilename);
 
@@ -287,7 +287,7 @@ namespace CryptaTray
                     throw new MissingConfigValueException(WrapperConfFilename, "wrapper.anchorfile");
                 }
 
-                // Read Freenet config: FProxy port TODO: Use ini-parser instead
+                // Read Crypta config: FProxy port TODO: Use ini-parser instead
                 // TODO: Does this need to wait until the node is running for the first run?
                 var freenetIniLines = File.ReadAllLines(Path.Combine(relativeTo, CryptadIniFilename));
 

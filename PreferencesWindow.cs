@@ -13,7 +13,7 @@ namespace CryptaTray
         private const int StartIconIndex = 0;
         private const int StartFreenetIndex = 1;
 
-        private const string RegistryStartupName = "Freenet";
+        private const string RegistryStartupName = "Crypta";
         private const string StartupKeyLocation = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Run";
 
         private readonly string _initialCustomLocation;
@@ -25,7 +25,7 @@ namespace CryptaTray
             StartupCheckboxList.SetItemChecked(StartIconIndex,
                                                Properties.Settings.Default.StartIcon);
             StartupCheckboxList.SetItemChecked(StartFreenetIndex,
-                                               Properties.Settings.Default.StartFreenet);
+                                               Properties.Settings.Default.StartCrypta);
 
             // TODO: Localize?
             BrowserChoice.Items.Add(BrowserUtil.Auto);
@@ -51,7 +51,7 @@ namespace CryptaTray
         private void Apply_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.StartIcon = StartupCheckboxList.GetItemChecked(StartIconIndex);
-            Properties.Settings.Default.StartFreenet = StartupCheckboxList.GetItemChecked(StartFreenetIndex);
+            Properties.Settings.Default.StartCrypta = StartupCheckboxList.GetItemChecked(StartFreenetIndex);
 
             Properties.Settings.Default.UseBrowser = (string)BrowserChoice.SelectedItem;
 
@@ -70,12 +70,12 @@ namespace CryptaTray
 
             if (Properties.Settings.Default.StartIcon)
             {
-                // Start Freenet or just the icon.
-                SetStartupArguments(Properties.Settings.Default.StartFreenet ? "-start" : "");
+                // Start Crypta or just the icon.
+                SetStartupArguments(Properties.Settings.Default.StartCrypta ? "-start" : "");
             }
-            else if (Properties.Settings.Default.StartFreenet)
+            else if (Properties.Settings.Default.StartCrypta)
             {
-                // Just start Freenet.
+                // Just start Crypta.
                 SetStartupArguments("-start -hide");
             }
             else

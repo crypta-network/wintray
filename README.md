@@ -1,11 +1,11 @@
-# Freenet Tray Application
+# Crypta Tray Application
 
 <a href="https://scan.coverity.com/projects/5458">
   <img alt="Coverity Scan Build Status"
        src="https://scan.coverity.com/projects/5458/badge.svg"/>
 </a>
 
-This Windows tray application allows starting and stopping Freenet, and opening browsers. It opens Freenet when left-clicked and offers a menu when right-clicked.
+This Windows tray application allows starting and stopping Crypta, and opening browsers. It opens Crypta when left-clicked and offers a menu when right-clicked.
 
 ## Supported Browsers
 
@@ -83,19 +83,19 @@ Command line options are executed from left to right, so `-othercommand -hide` w
 
 ### First run | -welcome
 
-This shows a balloon tip about using the tray and opens Freenet like -open. This suppresses the slow start notification.
+This shows a balloon tip about using the tray and opens Crypta like -open. This suppresses the slow start notification.
 
-### Open Freenet | -open
+### Open Crypta | -open
 
-Open Freenet's dashboard with a browser in privacy mode. If Freenet is not running it is started. The default browser preference is [seen here](Browsers/BrowserUtil.cs#L31), and a specific browser can be set instead in the preferences window.
+Open Crypta's dashboard with a browser in privacy mode. If Crypta is not running it is started. The default browser preference is [seen here](Browsers/BrowserUtil.cs#L31), and a specific browser can be set instead in the preferences window.
 
-### Start Freenet | -start
+### Start Crypta | -start
 
-Start Freenet.
+Start Crypta.
 
-### Stop Freenet | -stop
+### Stop Crypta | -stop
 
-Stop Freenet.
+Stop Crypta.
 
 ### Open downloads directory | -downloads
 
@@ -107,28 +107,28 @@ Open `wrapper.log` in notepad.
 
 ### Preferences | -preferences
 
-Set the browser to use, and whether to start the icon or start Freenet on startup.
+Set the browser to use, and whether to start the icon or start Crypta on startup.
 
 ### Hide icon | -hide
 
-Hide the icon by closing the tray application. If Freenet is stopped this menu entry is hidden.
+Hide the icon by closing the tray application. If Crypta is stopped this menu entry is hidden.
 
 ### Exit | -exit
 
-Stop Freenet if it is running, wait for it to exit, then close the tray application.
+Stop Crypta if it is running, wait for it to exit, then close the tray application.
 
 ## Translations
 
 Translations are primarily contributed through Transifex:
 
-* [Commands](https://www.transifex.com/projects/p/freenet/resource/windows-tray-commands/)
-* [Common](https://www.transifex.com/projects/p/freenet/resource/windows-tray-common/)
-* [Crash](https://www.transifex.com/projects/p/freenet/resource/windows-tray-crash/)
-* [Preferences](https://www.transifex.com/projects/p/freenet/resource/windows-tray-preferences/)
+* [Commands](https://www.transifex.com/projects/p/Crypta/resource/windows-tray-commands/)
+* [Common](https://www.transifex.com/projects/p/Crypta/resource/windows-tray-common/)
+* [Crash](https://www.transifex.com/projects/p/Crypta/resource/windows-tray-crash/)
+* [Preferences](https://www.transifex.com/projects/p/Crypta/resource/windows-tray-preferences/)
 
 The `<resource>.en.resx` files are made with the `wintray-filter-resx` script
 which filters strings which do not need to be translated. The script uses
-`filter-resx` from the [scripts repository](https://github.com/freenet/scripts/blob/master/filter-resx).
+`filter-resx` from the [scripts repository](https://github.com/Crypta/scripts/blob/master/filter-resx).
 
 This is because Transifex displays all `ResX` entries, but the Windows Forms
 Designer includes things like button size and font which do not need to be
@@ -137,5 +137,5 @@ translated.
 ## Feature requests and bug reports
 
 Please file any bugs or feature requests on the
-[Freenet Project issue tracker](https://bugs.freenetproject.org/bug_report_page.php)
+[Crypta Project issue tracker](https://bugs.freenetproject.org/bug_report_page.php)
 in the `wininstaller` category.

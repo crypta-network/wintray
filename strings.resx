@@ -121,10 +121,10 @@
     <value>The following details will help people provide support:</value>
   </data>
   <data name="ChooseCustomLocation" xml:space="preserve">
-    <value>Choose the folder Freenet is installed to.</value>
+    <value>Choose the folder Crypta is installed to.</value>
   </data>
-  <data name="FreenetStarting" xml:space="preserve">
-    <value>Freenet is starting.</value>
+  <data name="CryptaStarting" xml:space="preserve">
+    <value>Crypta is starting.</value>
   </data>
   <data name="JRENotFound" xml:space="preserve">
     <value>No Java runtime is available</value>
@@ -133,13 +133,13 @@
     <value>The configuration file '{0}' does not contain a valid value for '{1}'.</value>
   </data>
   <data name="PathTooLong" xml:space="preserve">
-    <value>The path is too long. Please install Freenet to a folder with a shorter path.</value>
+    <value>The path is too long. Please install Crypta to a folder with a shorter path.</value>
   </data>
   <data name="UnknownWrapperLaunchErrorTitle" xml:space="preserve">
     <value>Unknown Error</value>
   </data>
   <data name="WelcomeTip" xml:space="preserve">
-    <value>This tray icon controls Freenet. Left-click opens Freenet and right-click opens a menu.</value>
+    <value>This tray icon controls Crypta. Left-click opens Crypta and right-click opens a menu.</value>
   </data>
   <data name="WrapperFileNotFound" xml:space="preserve">
     <value>Wrapper executable was not found at '{0}'.</value>

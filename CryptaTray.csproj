@@ -28,7 +28,7 @@
     <ManifestKeyFile>CryptaTray_TemporaryKey.pfx</ManifestKeyFile>
     <GenerateManifests>true</GenerateManifests>
     <SignManifests>false</SignManifests>
-    <ApplicationIcon>Resources\freenet.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\crypta_logo.ico</ApplicationIcon>
     <StartupObject>CryptaTray.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
+    <Content Include="Resources\crypta_logo.ico" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Costura.Fody">

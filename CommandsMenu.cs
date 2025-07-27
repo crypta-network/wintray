@@ -15,7 +15,7 @@ namespace CryptaTray
         // Milliseconds between connection attempts while waiting for startup.
         private const int SocketPollInterval = 100;
         /*
-         * Milliseconds to wait for startup before notifying the user that Freenet is starting.
+         * Milliseconds to wait for startup before notifying the user that Crypta is starting.
          *
          * See http://www.nngroup.com/articles/response-times-3-important-limits/
          */
@@ -36,7 +36,7 @@ namespace CryptaTray
             // TODO: Read registry to check if the old tray runs at startup and change settings accordingly. (or offer to?)
             /*
              * TODO: Will the settings be saved always or only if non-default? If always saved this
-             * introduces a fingerprint of Freenet on the system even when it doesn't do anything on
+             * introduces a fingerprint of Crypta on the system even when it doesn't do anything on
              * startup.
              */
         }
@@ -134,7 +134,7 @@ namespace CryptaTray
             ReadCommandLine();
         }
 
-        private void openFreenetMenuItem_Click(object sender = null, EventArgs e = null)
+        private void openCryptaMenuItem_Click(object sender = null, EventArgs e = null)
         {
             Start();
 
@@ -179,7 +179,7 @@ namespace CryptaTray
                         {
                             BeginInvoke(new Action(() =>
                             {
-                                trayIcon.BalloonTipText = strings.FreenetStarting;
+                                trayIcon.BalloonTipText = strings.CryptaStarting;
                                 trayIcon.ShowBalloonTip(SlowOpenTimeout);
                             }));
                             showSlowOpen = false;
@@ -197,12 +197,12 @@ namespace CryptaTray
             pollFproxy.Start();
         }
 
-        private void startFreenetMenuItem_Click(object sender = null, EventArgs e = null)
+        private void startCryptaMenuItem_Click(object sender = null, EventArgs e = null)
         {
             Start();
         }
 
-        private void stopFreenetMenuItem_Click(object sender = null, EventArgs e = null)
+        private void stopCryptaMenuItem_Click(object sender = null, EventArgs e = null)
         {
             BeginInvoke(new Action(_node.Stop));
         }
@@ -257,7 +257,7 @@ namespace CryptaTray
         {
             if (e.Button == MouseButtons.Left)
             {
-                openFreenetMenuItem_Click(sender, e);
+                openCryptaMenuItem_Click(sender, e);
             }
         }
 
@@ -269,7 +269,10 @@ namespace CryptaTray
         private void ViewLogs()
         {
             // start the standart editor
-            Process.Start(_node.WrapperLogFilename);
+            Process.Start(new ProcessStartInfo(_node.WrapperLogFilename)
+            {
+                UseShellExecute = true
+            });
         }
 
         private void RefreshMenu(bool running)
@@ -294,13 +297,13 @@ namespace CryptaTray
                 switch (arg)
                 {
                     case "-open":
-                        openFreenetMenuItem_Click();
+                        openCryptaMenuItem_Click();
                         break;
                     case "-start":
-                        startFreenetMenuItem_Click();
+                        startCryptaMenuItem_Click();
                         break;
                     case "-stop":
-                        stopFreenetMenuItem_Click();
+                        stopCryptaMenuItem_Click();
                         break;
                     case "-downloads":
                         downloadsMenuItem_Click();
@@ -319,10 +322,10 @@ namespace CryptaTray
                         break;
                     case "-welcome":
                         trayIcon.BalloonTipIcon = ToolTipIcon.Info;
-                        trayIcon.BalloonTipTitle = strings.FreenetStarting;
+                        trayIcon.BalloonTipTitle = strings.CryptaStarting;
                         trayIcon.BalloonTipText = strings.WelcomeTip;
                         trayIcon.ShowBalloonTip(WelcomeTimeout);
-                        openFreenetMenuItem_Click(null, new OpenArgs { ShowSlow = false });
+                        openCryptaMenuItem_Click(null, new OpenArgs { ShowSlow = false });
                         break;
                 }
             }

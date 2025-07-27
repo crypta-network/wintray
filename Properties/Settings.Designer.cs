@@ -38,12 +38,12 @@ namespace CryptaTray.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool StartFreenet {
+        public bool StartCrypta {
             get {
-                return ((bool)(this["StartFreenet"]));
+                return ((bool)(this["StartCrypta"]));
             }
             set {
-                this["StartFreenet"] = value;
+                this["StartCrypta"] = value;
             }
         }
         

@@ -101,7 +101,7 @@ namespace CryptaTray {
 
             /* ================================
              * Only run if the installer started tray.exe with "-welcome" arg.
-             * If OS did not have Java installed, the Freenet installer installed a JVM.
+             * If OS did not have Java installed, the Crypta installer installed a JVM.
              * This JVM's java.exe can be found in PATH.
              * Problem: Installer starts tray.exe with old environment variables,
              * meaning PATH does not contain Java.exe at this point.
@@ -183,7 +183,7 @@ namespace CryptaTray {
                     }
                     else
                     {
-                        // inform user, but try starting Freenet anyway
+                        // inform user, but try starting Crypta anyway
                         // TODO: Adjust this in the future to default to JVM9+
                         FNLog.Debug("No java.specification.version found. Assuming JVM8.");
                         isJVM8 = true;

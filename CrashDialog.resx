@@ -154,7 +154,7 @@
     <value>2</value>
   </data>
   <data name="crashMessageLabel.Text" xml:space="preserve">
-    <value>Freenet crashed! See the log file for details. For help you can ask people on the support site or mailing list.</value>
+    <value>Crypta crashed! See the log file for details. For help you can ask people on the support site or mailing list.</value>
   </data>
   <data name="&gt;&gt;crashMessageLabel.Name" xml:space="preserve">
     <value>crashMessageLabel</value>
@@ -893,7 +893,7 @@
 </value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Freenet Crashed</value>
+    <value>Crypta Crashed</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>CrashDialog</value>

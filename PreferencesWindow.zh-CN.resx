@@ -64,7 +64,7 @@
     <value>在我登录 Windows 后显示托盘图标</value>
   </data>
   <data name="StartupCheckboxList.Items1" xml:space="preserve">
-    <value>在我登录 Windows 后启动 Freenet</value>
+    <value>在我登录 Windows 后启动 Crypta</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="StartupLabel.Text" xml:space="preserve">

@@ -28,114 +28,105 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CommandsMenu));
-            this.trayIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.openFreenetMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.startFreenetMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.stopFreenetMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.downloadsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewLogsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.preferencesMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hideIconMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenu.SuspendLayout();
-            this.SuspendLayout();
+            trayIcon = new System.Windows.Forms.NotifyIcon(components);
+            contextMenu = new System.Windows.Forms.ContextMenuStrip(components);
+            openFreenetMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            startFreenetMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            stopFreenetMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            downloadsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            viewLogsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            preferencesMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            hideIconMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            exitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            contextMenu.SuspendLayout();
+            SuspendLayout();
             // 
             // trayIcon
             // 
-            this.trayIcon.ContextMenuStrip = this.contextMenu;
-            resources.ApplyResources(this.trayIcon, "trayIcon");
-            this.trayIcon.MouseClick += new System.Windows.Forms.MouseEventHandler(this.trayIcon_MouseClick);
+            trayIcon.ContextMenuStrip = contextMenu;
+            resources.ApplyResources(trayIcon, "trayIcon");
+            trayIcon.MouseClick += trayIcon_MouseClick;
             // 
             // contextMenu
             // 
-            this.contextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.openFreenetMenuItem,
-            this.toolStripSeparator2,
-            this.startFreenetMenuItem,
-            this.stopFreenetMenuItem,
-            this.downloadsMenuItem,
-            this.viewLogsMenuItem,
-            this.toolStripSeparator1,
-            this.preferencesMenuItem,
-            this.hideIconMenuItem,
-            this.exitMenuItem});
-            this.contextMenu.Name = "contextMenu";
-            resources.ApplyResources(this.contextMenu, "contextMenu");
+            contextMenu.ImageScalingSize = new System.Drawing.Size(32, 32);
+            contextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { openFreenetMenuItem, toolStripSeparator2, startFreenetMenuItem, stopFreenetMenuItem, downloadsMenuItem, viewLogsMenuItem, toolStripSeparator1, preferencesMenuItem, hideIconMenuItem, exitMenuItem });
+            contextMenu.Name = "contextMenu";
+            resources.ApplyResources(contextMenu, "contextMenu");
             // 
             // openFreenetMenuItem
             // 
-            resources.ApplyResources(this.openFreenetMenuItem, "openFreenetMenuItem");
-            this.openFreenetMenuItem.Name = "openFreenetMenuItem";
-            this.openFreenetMenuItem.Click += new System.EventHandler(this.openFreenetMenuItem_Click);
+            resources.ApplyResources(openFreenetMenuItem, "openFreenetMenuItem");
+            openFreenetMenuItem.Name = "openFreenetMenuItem";
+            openFreenetMenuItem.Click += openCryptaMenuItem_Click;
             // 
             // toolStripSeparator2
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            resources.ApplyResources(toolStripSeparator2, "toolStripSeparator2");
             // 
             // startFreenetMenuItem
             // 
-            resources.ApplyResources(this.startFreenetMenuItem, "startFreenetMenuItem");
-            this.startFreenetMenuItem.Name = "startFreenetMenuItem";
-            this.startFreenetMenuItem.Click += new System.EventHandler(this.startFreenetMenuItem_Click);
+            resources.ApplyResources(startFreenetMenuItem, "startFreenetMenuItem");
+            startFreenetMenuItem.Name = "startFreenetMenuItem";
+            startFreenetMenuItem.Click += startCryptaMenuItem_Click;
             // 
             // stopFreenetMenuItem
             // 
-            resources.ApplyResources(this.stopFreenetMenuItem, "stopFreenetMenuItem");
-            this.stopFreenetMenuItem.Name = "stopFreenetMenuItem";
-            this.stopFreenetMenuItem.Click += new System.EventHandler(this.stopFreenetMenuItem_Click);
+            resources.ApplyResources(stopFreenetMenuItem, "stopFreenetMenuItem");
+            stopFreenetMenuItem.Name = "stopFreenetMenuItem";
+            stopFreenetMenuItem.Click += stopCryptaMenuItem_Click;
             // 
             // downloadsMenuItem
             // 
-            resources.ApplyResources(this.downloadsMenuItem, "downloadsMenuItem");
-            this.downloadsMenuItem.Name = "downloadsMenuItem";
-            this.downloadsMenuItem.Click += new System.EventHandler(this.downloadsMenuItem_Click);
+            resources.ApplyResources(downloadsMenuItem, "downloadsMenuItem");
+            downloadsMenuItem.Name = "downloadsMenuItem";
+            downloadsMenuItem.Click += downloadsMenuItem_Click;
             // 
             // viewLogsMenuItem
             // 
-            resources.ApplyResources(this.viewLogsMenuItem, "viewLogsMenuItem");
-            this.viewLogsMenuItem.Name = "viewLogsMenuItem";
-            this.viewLogsMenuItem.Click += new System.EventHandler(this.viewLogsMenuItem_Click);
+            resources.ApplyResources(viewLogsMenuItem, "viewLogsMenuItem");
+            viewLogsMenuItem.Name = "viewLogsMenuItem";
+            viewLogsMenuItem.Click += viewLogsMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            resources.ApplyResources(toolStripSeparator1, "toolStripSeparator1");
             // 
             // preferencesMenuItem
             // 
-            this.preferencesMenuItem.Name = "preferencesMenuItem";
-            resources.ApplyResources(this.preferencesMenuItem, "preferencesMenuItem");
-            this.preferencesMenuItem.Click += new System.EventHandler(this.preferencesMenuItem_Click);
+            preferencesMenuItem.Name = "preferencesMenuItem";
+            resources.ApplyResources(preferencesMenuItem, "preferencesMenuItem");
+            preferencesMenuItem.Click += preferencesMenuItem_Click;
             // 
             // hideIconMenuItem
             // 
-            resources.ApplyResources(this.hideIconMenuItem, "hideIconMenuItem");
-            this.hideIconMenuItem.Name = "hideIconMenuItem";
-            this.hideIconMenuItem.Click += new System.EventHandler(this.hideIconMenuItem_Click);
+            resources.ApplyResources(hideIconMenuItem, "hideIconMenuItem");
+            hideIconMenuItem.Name = "hideIconMenuItem";
+            hideIconMenuItem.Click += hideIconMenuItem_Click;
             // 
             // exitMenuItem
             // 
-            this.exitMenuItem.Name = "exitMenuItem";
-            resources.ApplyResources(this.exitMenuItem, "exitMenuItem");
-            this.exitMenuItem.Click += new System.EventHandler(this.exitMenuItem_Click);
+            exitMenuItem.Name = "exitMenuItem";
+            resources.ApplyResources(exitMenuItem, "exitMenuItem");
+            exitMenuItem.Click += exitMenuItem_Click;
             // 
             // CommandsMenu
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "CommandsMenu";
-            this.ShowInTaskbar = false;
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
-            this.Load += new System.EventHandler(this.CommandsMenu_Load);
-            this.contextMenu.ResumeLayout(false);
-            this.ResumeLayout(false);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            Name = "CommandsMenu";
+            ShowInTaskbar = false;
+            WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            Load += CommandsMenu_Load;
+            contextMenu.ResumeLayout(false);
+            ResumeLayout(false);
 
         }
 

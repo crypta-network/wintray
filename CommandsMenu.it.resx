@@ -68,13 +68,13 @@
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
   <data name="openFreenetMenuItem.Text" xml:space="preserve">
-    <value>Apri Freenet</value>
+    <value>Apri Crypta</value>
   </data>
   <data name="startFreenetMenuItem.Text" xml:space="preserve">
-    <value>Avvia Freenet</value>
+    <value>Avvia Crypta</value>
   </data>
   <data name="stopFreenetMenuItem.Text" xml:space="preserve">
-    <value>Ferma Freenet</value>
+    <value>Ferma Crypta</value>
   </data>
   <data name="downloadsMenuItem.Text" xml:space="preserve">
     <value>Download</value>
@@ -92,7 +92,7 @@
     <value>Esci</value>
   </data>
   <data name="trayIcon.Text" xml:space="preserve">
-    <value>Freenet</value>
+    <value>Crypta</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

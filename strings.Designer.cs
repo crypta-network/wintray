@@ -70,7 +70,7 @@ namespace CryptaTray {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Choose the folder Freenet is installed to..
+        ///   Looks up a localized string similar to Choose the folder Crypta is installed to..
         /// </summary>
         internal static string ChooseCustomLocation {
             get {
@@ -79,11 +79,11 @@ namespace CryptaTray {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Freenet is starting..
+        ///   Looks up a localized string similar to Crypta is starting..
         /// </summary>
-        internal static string FreenetStarting {
+        internal static string CryptaStarting {
             get {
-                return ResourceManager.GetString("FreenetStarting", resourceCulture);
+                return ResourceManager.GetString("CryptaStarting", resourceCulture);
             }
         }
         
@@ -106,7 +106,7 @@ namespace CryptaTray {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The path is too long. Please install Freenet to a folder with a shorter path..
+        ///   Looks up a localized string similar to The path is too long. Please install Crypta to a folder with a shorter path..
         /// </summary>
         internal static string PathTooLong {
             get {
@@ -124,7 +124,7 @@ namespace CryptaTray {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This tray icon controls Freenet. Left-click opens Freenet and right-click opens a menu..
+        ///   Looks up a localized string similar to This tray icon controls Crypta. Left-click opens Crypta and right-click opens a menu..
         /// </summary>
         internal static string WelcomeTip {
             get {

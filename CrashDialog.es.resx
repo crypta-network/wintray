@@ -63,7 +63,7 @@
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="crashMessageLabel.Text" xml:space="preserve">
-    <value>Freenet Fallo! Ver el archivo de registro para obtener más detalles. Para obtener ayuda usted puede pedirle a la gente en el chat de soporte o lista de correo.</value>
+    <value>Crypta Fallo! Ver el archivo de registro para obtener más detalles. Para obtener ayuda usted puede pedirle a la gente en el chat de soporte o lista de correo.</value>
   </data>
   <data name="ViewLogButton.Text" xml:space="preserve">
     <value>Ver archivo de registro</value>
@@ -72,10 +72,10 @@
     <value>Abrir el chat de soporte</value>
   </data>
   <data name="MailingListButton.Text" xml:space="preserve">
-    <value>Abrir lista de correo Freenet</value>
+    <value>Abrir lista de correo Crypta</value>
   </data>
   <data name="RestartButton.Text" xml:space="preserve">
-    <value>Reiniciar Freenet</value>
+    <value>Reiniciar Crypta</value>
   </data>
   <data name="CloseButton.Text" xml:space="preserve">
     <value>Cerrar</value>
@@ -84,6 +84,6 @@
     <value>True</value>
   </metadata>
   <data name="$this.Text" xml:space="preserve">
-    <value>Freenet Fallo</value>
+    <value>Crypta Fallo</value>
   </data>
   </root>

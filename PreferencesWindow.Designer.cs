@@ -29,145 +29,138 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PreferencesWindow));
-            this.StartupCheckboxList = new System.Windows.Forms.CheckedListBox();
-            this.StartupLabel = new System.Windows.Forms.Label();
-            this.ApplyButton = new System.Windows.Forms.Button();
-            this.ClosePreferencesButton = new System.Windows.Forms.Button();
-            this.BrowserChoice = new System.Windows.Forms.ComboBox();
-            this.BrowserLabel = new System.Windows.Forms.Label();
-            this.BehaviorLabel = new System.Windows.Forms.Label();
-            this.SlowStartOption = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.LogLevelChoice = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.CustomLocationDisplay = new System.Windows.Forms.TextBox();
-            this.customLocationClear = new System.Windows.Forms.Button();
-            this.CustomLocationBrowse = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            StartupCheckboxList = new System.Windows.Forms.CheckedListBox();
+            StartupLabel = new System.Windows.Forms.Label();
+            ApplyButton = new System.Windows.Forms.Button();
+            ClosePreferencesButton = new System.Windows.Forms.Button();
+            BrowserChoice = new System.Windows.Forms.ComboBox();
+            BrowserLabel = new System.Windows.Forms.Label();
+            BehaviorLabel = new System.Windows.Forms.Label();
+            SlowStartOption = new System.Windows.Forms.CheckBox();
+            label1 = new System.Windows.Forms.Label();
+            LogLevelChoice = new System.Windows.Forms.ComboBox();
+            label2 = new System.Windows.Forms.Label();
+            CustomLocationDisplay = new System.Windows.Forms.TextBox();
+            customLocationClear = new System.Windows.Forms.Button();
+            CustomLocationBrowse = new System.Windows.Forms.Button();
+            SuspendLayout();
             // 
             // StartupCheckboxList
             // 
-            this.StartupCheckboxList.BackColor = System.Drawing.SystemColors.Window;
-            this.StartupCheckboxList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.StartupCheckboxList.CheckOnClick = true;
-            resources.ApplyResources(this.StartupCheckboxList, "StartupCheckboxList");
-            this.StartupCheckboxList.FormattingEnabled = true;
-            this.StartupCheckboxList.Items.AddRange(new object[] {
-            resources.GetString("StartupCheckboxList.Items"),
-            resources.GetString("StartupCheckboxList.Items1")});
-            this.StartupCheckboxList.Name = "StartupCheckboxList";
+            StartupCheckboxList.BackColor = System.Drawing.SystemColors.Window;
+            StartupCheckboxList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            StartupCheckboxList.CheckOnClick = true;
+            resources.ApplyResources(StartupCheckboxList, "StartupCheckboxList");
+            StartupCheckboxList.FormattingEnabled = true;
+            StartupCheckboxList.Items.AddRange(new object[] { resources.GetString("StartupCheckboxList.Items"), resources.GetString("StartupCheckboxList.Items1") });
+            StartupCheckboxList.Name = "StartupCheckboxList";
             // 
             // StartupLabel
             // 
-            resources.ApplyResources(this.StartupLabel, "StartupLabel");
-            this.StartupLabel.Name = "StartupLabel";
+            resources.ApplyResources(StartupLabel, "StartupLabel");
+            StartupLabel.Name = "StartupLabel";
             // 
             // ApplyButton
             // 
-            resources.ApplyResources(this.ApplyButton, "ApplyButton");
-            this.ApplyButton.Name = "ApplyButton";
-            this.ApplyButton.UseVisualStyleBackColor = true;
-            this.ApplyButton.Click += new System.EventHandler(this.Apply_Click);
+            resources.ApplyResources(ApplyButton, "ApplyButton");
+            ApplyButton.Name = "ApplyButton";
+            ApplyButton.UseVisualStyleBackColor = true;
+            ApplyButton.Click += Apply_Click;
             // 
             // ClosePreferencesButton
             // 
-            this.ClosePreferencesButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            resources.ApplyResources(this.ClosePreferencesButton, "ClosePreferencesButton");
-            this.ClosePreferencesButton.Name = "ClosePreferencesButton";
-            this.ClosePreferencesButton.UseVisualStyleBackColor = true;
-            this.ClosePreferencesButton.Click += new System.EventHandler(this.Cancel_Click);
+            ClosePreferencesButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            resources.ApplyResources(ClosePreferencesButton, "ClosePreferencesButton");
+            ClosePreferencesButton.Name = "ClosePreferencesButton";
+            ClosePreferencesButton.UseVisualStyleBackColor = true;
+            ClosePreferencesButton.Click += Cancel_Click;
             // 
             // BrowserChoice
             // 
-            resources.ApplyResources(this.BrowserChoice, "BrowserChoice");
-            this.BrowserChoice.FormattingEnabled = true;
-            this.BrowserChoice.Name = "BrowserChoice";
+            resources.ApplyResources(BrowserChoice, "BrowserChoice");
+            BrowserChoice.FormattingEnabled = true;
+            BrowserChoice.Name = "BrowserChoice";
             // 
             // BrowserLabel
             // 
-            resources.ApplyResources(this.BrowserLabel, "BrowserLabel");
-            this.BrowserLabel.Name = "BrowserLabel";
+            resources.ApplyResources(BrowserLabel, "BrowserLabel");
+            BrowserLabel.Name = "BrowserLabel";
             // 
             // BehaviorLabel
             // 
-            resources.ApplyResources(this.BehaviorLabel, "BehaviorLabel");
-            this.BehaviorLabel.Name = "BehaviorLabel";
+            resources.ApplyResources(BehaviorLabel, "BehaviorLabel");
+            BehaviorLabel.Name = "BehaviorLabel";
             // 
             // SlowStartOption
             // 
-            resources.ApplyResources(this.SlowStartOption, "SlowStartOption");
-            this.SlowStartOption.Name = "SlowStartOption";
-            this.SlowStartOption.UseVisualStyleBackColor = true;
+            resources.ApplyResources(SlowStartOption, "SlowStartOption");
+            SlowStartOption.Name = "SlowStartOption";
+            SlowStartOption.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            resources.ApplyResources(label1, "label1");
+            label1.Name = "label1";
             // 
             // LogLevelChoice
             // 
-            resources.ApplyResources(this.LogLevelChoice, "LogLevelChoice");
-            this.LogLevelChoice.FormattingEnabled = true;
-            this.LogLevelChoice.Items.AddRange(new object[] {
-            resources.GetString("LogLevelChoice.Items"),
-            resources.GetString("LogLevelChoice.Items1"),
-            resources.GetString("LogLevelChoice.Items2"),
-            resources.GetString("LogLevelChoice.Items3"),
-            resources.GetString("LogLevelChoice.Items4")});
-            this.LogLevelChoice.Name = "LogLevelChoice";
+            resources.ApplyResources(LogLevelChoice, "LogLevelChoice");
+            LogLevelChoice.FormattingEnabled = true;
+            LogLevelChoice.Items.AddRange(new object[] { resources.GetString("LogLevelChoice.Items"), resources.GetString("LogLevelChoice.Items1"), resources.GetString("LogLevelChoice.Items2"), resources.GetString("LogLevelChoice.Items3"), resources.GetString("LogLevelChoice.Items4") });
+            LogLevelChoice.Name = "LogLevelChoice";
             // 
             // label2
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
+            resources.ApplyResources(label2, "label2");
+            label2.Name = "label2";
             // 
             // CustomLocationDisplay
             // 
-            resources.ApplyResources(this.CustomLocationDisplay, "CustomLocationDisplay");
-            this.CustomLocationDisplay.Name = "CustomLocationDisplay";
-            this.CustomLocationDisplay.ReadOnly = true;
+            resources.ApplyResources(CustomLocationDisplay, "CustomLocationDisplay");
+            CustomLocationDisplay.Name = "CustomLocationDisplay";
+            CustomLocationDisplay.ReadOnly = true;
             // 
             // customLocationClear
             // 
-            this.customLocationClear.BackColor = System.Drawing.SystemColors.Control;
-            resources.ApplyResources(this.customLocationClear, "customLocationClear");
-            this.customLocationClear.Name = "customLocationClear";
-            this.customLocationClear.UseVisualStyleBackColor = false;
-            this.customLocationClear.Click += new System.EventHandler(this.customLocationClear_Click);
+            customLocationClear.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(customLocationClear, "customLocationClear");
+            customLocationClear.Name = "customLocationClear";
+            customLocationClear.UseVisualStyleBackColor = false;
+            customLocationClear.Click += customLocationClear_Click;
             // 
             // CustomLocationBrowse
             // 
-            resources.ApplyResources(this.CustomLocationBrowse, "CustomLocationBrowse");
-            this.CustomLocationBrowse.Name = "CustomLocationBrowse";
-            this.CustomLocationBrowse.UseVisualStyleBackColor = true;
-            this.CustomLocationBrowse.Click += new System.EventHandler(this.CustomLocationBrowse_Click);
+            resources.ApplyResources(CustomLocationBrowse, "CustomLocationBrowse");
+            CustomLocationBrowse.Name = "CustomLocationBrowse";
+            CustomLocationBrowse.UseVisualStyleBackColor = true;
+            CustomLocationBrowse.Click += CustomLocationBrowse_Click;
             // 
             // PreferencesWindow
             // 
-            this.AcceptButton = this.ApplyButton;
+            AcceptButton = ApplyButton;
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.ClosePreferencesButton;
-            this.Controls.Add(this.CustomLocationBrowse);
-            this.Controls.Add(this.customLocationClear);
-            this.Controls.Add(this.CustomLocationDisplay);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.LogLevelChoice);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.SlowStartOption);
-            this.Controls.Add(this.BehaviorLabel);
-            this.Controls.Add(this.BrowserLabel);
-            this.Controls.Add(this.BrowserChoice);
-            this.Controls.Add(this.ClosePreferencesButton);
-            this.Controls.Add(this.ApplyButton);
-            this.Controls.Add(this.StartupLabel);
-            this.Controls.Add(this.StartupCheckboxList);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "PreferencesWindow";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            CancelButton = ClosePreferencesButton;
+            Controls.Add(CustomLocationBrowse);
+            Controls.Add(customLocationClear);
+            Controls.Add(CustomLocationDisplay);
+            Controls.Add(label2);
+            Controls.Add(LogLevelChoice);
+            Controls.Add(label1);
+            Controls.Add(SlowStartOption);
+            Controls.Add(BehaviorLabel);
+            Controls.Add(BrowserLabel);
+            Controls.Add(BrowserChoice);
+            Controls.Add(ClosePreferencesButton);
+            Controls.Add(ApplyButton);
+            Controls.Add(StartupLabel);
+            Controls.Add(StartupCheckboxList);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "PreferencesWindow";
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 

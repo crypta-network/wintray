@@ -5,7 +5,7 @@
     <Setting Name="StartIcon" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="StartFreenet" Type="System.Boolean" Scope="User">
+    <Setting Name="StartCrypta" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="UseBrowser" Type="System.String" Scope="User">
