@@ -5,7 +5,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 
-namespace FreenetTray
+namespace CryptaTray
 {
     public class NodeController
     {
@@ -50,7 +50,7 @@ namespace FreenetTray
         public int FProxyPort { get { return _config.FProxyPort; } }
         public string DownloadsDir { get { return _config.DownloadsDir; } }
 
-        private const string FreenetIniFilename = @"freenet.ini";
+        private const string CryptadIniFilename = @"cryptad.ini";
         private const string WrapperConfFilename = "wrapper.conf";
 
         public static string WrapperFilename() {
@@ -80,7 +80,7 @@ namespace FreenetTray
                 foreach (var path in new[]
                 {
                     Directory.GetCurrentDirectory(),
-                    Environment.ExpandEnvironmentVariables(@"%LocalAppData%\Freenet"),
+                    Environment.ExpandEnvironmentVariables(@"%LocalAppData%\Crypta"),
                 })
                 {
                     // TODO: If the wrapper has problems with arguments with non-ASCII characters should
@@ -289,14 +289,14 @@ namespace FreenetTray
 
                 // Read Freenet config: FProxy port TODO: Use ini-parser instead
                 // TODO: Does this need to wait until the node is running for the first run?
-                var freenetIniLines = File.ReadAllLines(Path.Combine(relativeTo, FreenetIniFilename));
+                var freenetIniLines = File.ReadAllLines(Path.Combine(relativeTo, CryptadIniFilename));
 
                 var port = RequireValue(freenetIniLines, "fproxy.port");
                 var isValid = int.TryParse(port, out FProxyPort);
                 if (!isValid)
                 {
                     FNLog.Error("fproxy.port is not an integer.");
-                    throw new MissingConfigValueException(FreenetIniFilename, "fproxy.port");
+                    throw new MissingConfigValueException(CryptadIniFilename, "fproxy.port");
                 }
 
                 DownloadsDir = Path.Combine(RelativeTo,
@@ -322,7 +322,7 @@ namespace FreenetTray
                 }
                 catch (InvalidOperationException)
                 {
-                    throw new MissingConfigValueException(FreenetIniFilename, key);
+                    throw new MissingConfigValueException(CryptadIniFilename, key);
                 }
             }
         }

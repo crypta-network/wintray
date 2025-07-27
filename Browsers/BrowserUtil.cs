@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 
-namespace FreenetTray.Browsers
+namespace CryptaTray.Browsers
 {
 
     public static class BrowserUtil

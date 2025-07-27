@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Text.RegularExpressions;
 
 
-namespace FreenetTray {
+namespace CryptaTray {
     public enum JREType {
         None,
         JRE64Bit,

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using FreenetTray.Browsers;
+using CryptaTray.Browsers;
 
-namespace FreenetTray
+namespace CryptaTray
 {
     public partial class CrashDialog : Form
     {

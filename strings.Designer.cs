@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FreenetTray {
+namespace CryptaTray {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace FreenetTray {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("FreenetTray.strings", typeof(strings).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("CryptaTray.strings", typeof(strings).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

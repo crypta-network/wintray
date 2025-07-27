@@ -1,4 +1,4 @@
-﻿using FreenetTray.Browsers;
+﻿using CryptaTray.Browsers;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Windows.Forms;
 using NLog;
 using NLog.Config;
 
-namespace FreenetTray
+namespace CryptaTray
 {
     public partial class PreferencesWindow : Form
     {

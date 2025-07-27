@@ -1,11 +1,11 @@
-﻿using FreenetTray.Properties;
+﻿using CryptaTray.Properties;
 using NLog;
 using NLog.Config;
 using NLog.Targets;
 using System;
 
 
-namespace FreenetTray {
+namespace CryptaTray {
     class FNLog {
         /* This class allows logging to reach the VS console during development,
          * regardless of how NLog is configured. 
@@ -24,7 +24,7 @@ namespace FreenetTray {
         public static void Initialize() {
 
             var config = new LoggingConfiguration();
-            var target = new FileTarget {FileName = "${basedir}/FreenetTray.log"};
+            var target = new FileTarget {FileName = "${basedir}/CryptaTray.log"};
             config.AddTarget(LogTargetName, target);
             var rule = new LoggingRule("*", LogLevel.FromString(Settings.Default.LogLevel), target);
             config.LoggingRules.Add(rule);

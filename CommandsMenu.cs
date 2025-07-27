@@ -5,10 +5,10 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 using System.Windows.Forms;
-using FreenetTray.Browsers;
-using FreenetTray.Properties;
+using CryptaTray.Browsers;
+using CryptaTray.Properties;
 
-namespace FreenetTray
+namespace CryptaTray
 {
     public partial class CommandsMenu : Form
     {

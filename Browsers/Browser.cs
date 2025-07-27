@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace FreenetTray.Browsers {
+namespace CryptaTray.Browsers {
     interface IBrowser {
         /*
          * Return true if the URI was opened in privacy mode.

@@ -1,7 +1,8 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreenetTray", "FreenetTray.csproj", "{E4F85BC4-5FC2-4166-8F79-1AC71A7CB1E4}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36310.24 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptaTray", "CryptaTray.csproj", "{E4F85BC4-5FC2-4166-8F79-1AC71A7CB1E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

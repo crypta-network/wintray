@@ -3,7 +3,7 @@ using System;
 using System.IO;
 using System.Linq;
 
-namespace FreenetTray.Browsers
+namespace CryptaTray.Browsers
 {
     class Firefox: Browser
     {

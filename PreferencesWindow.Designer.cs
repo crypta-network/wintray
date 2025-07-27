@@ -1,4 +1,4 @@
-﻿namespace FreenetTray
+﻿namespace CryptaTray
 {
     partial class PreferencesWindow
     {

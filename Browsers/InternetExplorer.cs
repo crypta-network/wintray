@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using Microsoft.Win32;
 
-namespace FreenetTray.Browsers
+namespace CryptaTray.Browsers
 {
     class InternetExplorer: Browser
     {

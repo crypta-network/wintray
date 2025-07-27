@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.IO;
 using Microsoft.Win32;
 
-namespace FreenetTray.Browsers {
+namespace CryptaTray.Browsers {
     class Edge: Browser {
 
         private static string NTVersionRegistryKey = @"SOFTWARE\Microsoft\Windows NT\CurrentVersion";

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace FreenetTray
+namespace CryptaTray
 {
     static class Program
     {
@@ -13,7 +13,7 @@ namespace FreenetTray
         {
 
             // migrate settings from older config files for previous assembly versions
-            FreenetTray.Properties.Settings.Default.Upgrade();
+            CryptaTray.Properties.Settings.Default.Upgrade();
 
             FNLog.Initialize();
 
