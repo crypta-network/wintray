@@ -124,38 +124,38 @@
     <value>112, 17</value>
   </metadata>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="openFreenetMenuItem.Enabled" type="System.Boolean, mscorlib">
+  <data name="openCryptaMenuItem.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="openFreenetMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="openCryptaMenuItem.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11.25pt, style=Bold</value>
   </data>
-  <data name="openFreenetMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="openCryptaMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>300, 48</value>
   </data>
-  <data name="openFreenetMenuItem.Text" xml:space="preserve">
+  <data name="openCryptaMenuItem.Text" xml:space="preserve">
     <value>Open Crypta</value>
   </data>
   <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
     <value>297, 6</value>
   </data>
-  <data name="startFreenetMenuItem.Enabled" type="System.Boolean, mscorlib">
+  <data name="startCryptaMenuItem.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="startFreenetMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="startCryptaMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>300, 48</value>
   </data>
-  <data name="startFreenetMenuItem.Text" xml:space="preserve">
+  <data name="startCryptaMenuItem.Text" xml:space="preserve">
     <value>Start Crypta</value>
   </data>
-  <data name="stopFreenetMenuItem.Enabled" type="System.Boolean, mscorlib">
+  <data name="stopCryptaMenuItem.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="stopFreenetMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="stopCryptaMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>300, 48</value>
   </data>
-  <data name="stopFreenetMenuItem.Text" xml:space="preserve">
+  <data name="stopCryptaMenuItem.Text" xml:space="preserve">
     <value>Stop Crypta</value>
   </data>
   <data name="downloadsMenuItem.Enabled" type="System.Boolean, mscorlib">
@@ -826,10 +826,10 @@
   <data name="&gt;&gt;trayIcon.Type" xml:space="preserve">
     <value>System.Windows.Forms.NotifyIcon, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;openFreenetMenuItem.Name" xml:space="preserve">
-    <value>openFreenetMenuItem</value>
+  <data name="&gt;&gt;openCryptaMenuItem.Name" xml:space="preserve">
+    <value>openCryptaMenuItem</value>
   </data>
-  <data name="&gt;&gt;openFreenetMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;openCryptaMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
@@ -838,16 +838,16 @@
   <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;startFreenetMenuItem.Name" xml:space="preserve">
-    <value>startFreenetMenuItem</value>
+  <data name="&gt;&gt;startCryptaMenuItem.Name" xml:space="preserve">
+    <value>startCryptaMenuItem</value>
   </data>
-  <data name="&gt;&gt;startFreenetMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;startCryptaMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;stopFreenetMenuItem.Name" xml:space="preserve">
-    <value>stopFreenetMenuItem</value>
+  <data name="&gt;&gt;stopCryptaMenuItem.Name" xml:space="preserve">
+    <value>stopCryptaMenuItem</value>
   </data>
-  <data name="&gt;&gt;stopFreenetMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;stopCryptaMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;downloadsMenuItem.Name" xml:space="preserve">

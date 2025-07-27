@@ -136,7 +136,7 @@
     <value>Tuntematon virhe</value>
   </data>
   <data name="WelcomeTip" xml:space="preserve">
-    <value>Tämä kuvake kontrolloi Freenettiä. Vasen napsautus avaa Freenetin ja oikea napsautus valikon.</value>
+    <value>Tämä kuvake kontrolloi Cryptatiä. Vasen napsautus avaa Cryptain ja oikea napsautus valikon.</value>
   </data>
   <data name="WrapperFileNotFound" xml:space="preserve">
     <value>Wrapperia ei löytynyt sijainnista '{0}'.</value>

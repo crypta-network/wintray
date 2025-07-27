@@ -130,13 +130,13 @@
     <value>A '{0}' konfigurációs fájl nem tartalmaz '{1}' tulajdonsághoz érvényes értéket.</value>
   </data>
   <data name="PathTooLong" xml:space="preserve">
-    <value>Az útvonal túl hosszú. Kérjük telepítse a Freenetet egy rövidebb útvonalú mappába.</value>
+    <value>Az útvonal túl hosszú. Kérjük telepítse a Cryptaet egy rövidebb útvonalú mappába.</value>
   </data>
   <data name="UnknownWrapperLaunchErrorTitle" xml:space="preserve">
     <value>Ismeretlen hiba</value>
   </data>
   <data name="WelcomeTip" xml:space="preserve">
-    <value>Ez a tálca ikon a Freenetet vezérli. Bal gombbal megnyithatja a Freenetet, jobb gombbal pedig a menüt.</value>
+    <value>Ez a tálca ikon a Cryptaet vezérli. Bal gombbal megnyithatja a Cryptaet, jobb gombbal pedig a menüt.</value>
   </data>
   <data name="WrapperFileNotFound" xml:space="preserve">
     <value>A wrapper futtatható állomány a '{0}' útvonalon nem található.</value>

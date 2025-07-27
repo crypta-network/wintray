@@ -11,7 +11,7 @@ namespace CryptaTray
     public partial class PreferencesWindow : Form
     {
         private const int StartIconIndex = 0;
-        private const int StartFreenetIndex = 1;
+        private const int StartCryptaIndex = 1;
 
         private const string RegistryStartupName = "Crypta";
         private const string StartupKeyLocation = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Run";
@@ -24,7 +24,7 @@ namespace CryptaTray
 
             StartupCheckboxList.SetItemChecked(StartIconIndex,
                                                Properties.Settings.Default.StartIcon);
-            StartupCheckboxList.SetItemChecked(StartFreenetIndex,
+            StartupCheckboxList.SetItemChecked(StartCryptaIndex,
                                                Properties.Settings.Default.StartCrypta);
 
             // TODO: Localize?
@@ -51,7 +51,7 @@ namespace CryptaTray
         private void Apply_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.StartIcon = StartupCheckboxList.GetItemChecked(StartIconIndex);
-            Properties.Settings.Default.StartCrypta = StartupCheckboxList.GetItemChecked(StartFreenetIndex);
+            Properties.Settings.Default.StartCrypta = StartupCheckboxList.GetItemChecked(StartCryptaIndex);
 
             Properties.Settings.Default.UseBrowser = (string)BrowserChoice.SelectedItem;
 

@@ -289,9 +289,9 @@ namespace CryptaTray
 
                 // Read Crypta config: FProxy port TODO: Use ini-parser instead
                 // TODO: Does this need to wait until the node is running for the first run?
-                var freenetIniLines = File.ReadAllLines(Path.Combine(relativeTo, CryptadIniFilename));
+                var cryptaIniLines = File.ReadAllLines(Path.Combine(relativeTo, CryptadIniFilename));
 
-                var port = RequireValue(freenetIniLines, "fproxy.port");
+                var port = RequireValue(cryptaIniLines, "fproxy.port");
                 var isValid = int.TryParse(port, out FProxyPort);
                 if (!isValid)
                 {
@@ -300,7 +300,7 @@ namespace CryptaTray
                 }
 
                 DownloadsDir = Path.Combine(RelativeTo,
-                                            RequireValue(freenetIniLines, "node.downloadsDir"));
+                                            RequireValue(cryptaIniLines, "node.downloadsDir"));
             }
 
             private static bool Defines(string line, string key)

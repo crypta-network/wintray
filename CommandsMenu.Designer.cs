@@ -32,10 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CommandsMenu));
             trayIcon = new System.Windows.Forms.NotifyIcon(components);
             contextMenu = new System.Windows.Forms.ContextMenuStrip(components);
-            openFreenetMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            openCryptaMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            startFreenetMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            stopFreenetMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            startCryptaMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            stopCryptaMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             downloadsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             viewLogsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -54,32 +54,32 @@
             // contextMenu
             // 
             contextMenu.ImageScalingSize = new System.Drawing.Size(32, 32);
-            contextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { openFreenetMenuItem, toolStripSeparator2, startFreenetMenuItem, stopFreenetMenuItem, downloadsMenuItem, viewLogsMenuItem, toolStripSeparator1, preferencesMenuItem, hideIconMenuItem, exitMenuItem });
+            contextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { openCryptaMenuItem, toolStripSeparator2, startCryptaMenuItem, stopCryptaMenuItem, downloadsMenuItem, viewLogsMenuItem, toolStripSeparator1, preferencesMenuItem, hideIconMenuItem, exitMenuItem });
             contextMenu.Name = "contextMenu";
             resources.ApplyResources(contextMenu, "contextMenu");
             // 
-            // openFreenetMenuItem
+            // openCryptaMenuItem
             // 
-            resources.ApplyResources(openFreenetMenuItem, "openFreenetMenuItem");
-            openFreenetMenuItem.Name = "openFreenetMenuItem";
-            openFreenetMenuItem.Click += openCryptaMenuItem_Click;
+            resources.ApplyResources(openCryptaMenuItem, "openCryptaMenuItem");
+            openCryptaMenuItem.Name = "openCryptaMenuItem";
+            openCryptaMenuItem.Click += openCryptaMenuItem_Click;
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
             resources.ApplyResources(toolStripSeparator2, "toolStripSeparator2");
             // 
-            // startFreenetMenuItem
+            // startCryptaMenuItem
             // 
-            resources.ApplyResources(startFreenetMenuItem, "startFreenetMenuItem");
-            startFreenetMenuItem.Name = "startFreenetMenuItem";
-            startFreenetMenuItem.Click += startCryptaMenuItem_Click;
+            resources.ApplyResources(startCryptaMenuItem, "startCryptaMenuItem");
+            startCryptaMenuItem.Name = "startCryptaMenuItem";
+            startCryptaMenuItem.Click += startCryptaMenuItem_Click;
             // 
-            // stopFreenetMenuItem
+            // stopCryptaMenuItem
             // 
-            resources.ApplyResources(stopFreenetMenuItem, "stopFreenetMenuItem");
-            stopFreenetMenuItem.Name = "stopFreenetMenuItem";
-            stopFreenetMenuItem.Click += stopCryptaMenuItem_Click;
+            resources.ApplyResources(stopCryptaMenuItem, "stopCryptaMenuItem");
+            stopCryptaMenuItem.Name = "stopCryptaMenuItem";
+            stopCryptaMenuItem.Click += stopCryptaMenuItem_Click;
             // 
             // downloadsMenuItem
             // 
@@ -134,10 +134,10 @@
 
         private System.Windows.Forms.NotifyIcon trayIcon;
         private System.Windows.Forms.ContextMenuStrip contextMenu;
-        private System.Windows.Forms.ToolStripMenuItem openFreenetMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openCryptaMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem startFreenetMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem stopFreenetMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem startCryptaMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stopCryptaMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewLogsMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem exitMenuItem;

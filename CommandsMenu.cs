@@ -116,9 +116,9 @@ namespace CryptaTray
 
             foreach (var menuItem in new[]
             {
-                openFreenetMenuItem,
-                startFreenetMenuItem,
-                stopFreenetMenuItem,
+                openCryptaMenuItem,
+                startCryptaMenuItem,
+                stopCryptaMenuItem,
                 downloadsMenuItem,
                 viewLogsMenuItem,
                 preferencesMenuItem,
@@ -279,8 +279,8 @@ namespace CryptaTray
         {
             BeginInvoke(new Action(() =>
             {
-                startFreenetMenuItem.Enabled = !running;
-                stopFreenetMenuItem.Enabled = running;
+                startCryptaMenuItem.Enabled = !running;
+                stopCryptaMenuItem.Enabled = running;
                 hideIconMenuItem.Visible = running;
                 trayIcon.Icon = running ? Resources.Online : Resources.Offline;
             }));
