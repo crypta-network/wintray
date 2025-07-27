@@ -1,20 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E4F85BC4-5FC2-4166-8F79-1AC71A7CB1E4}</ProjectGuid>
+    <TargetFramework>net9.0-windows</TargetFramework>
     <OutputType>WinExe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FreenetTray</RootNamespace>
-    <AssemblyName>FreenetTray</AssemblyName>
-    <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>true</IsWebBootstrapper>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
@@ -33,269 +21,16 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
     <ManifestCertificateThumbprint>BEC4471BC14AD0058E27A9B0B569F11889D11A17</ManifestCertificateThumbprint>
-  </PropertyGroup>
-  <PropertyGroup>
     <ManifestKeyFile>FreenetTray_TemporaryKey.pfx</ManifestKeyFile>
-  </PropertyGroup>
-  <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
-  </PropertyGroup>
-  <PropertyGroup>
     <SignManifests>false</SignManifests>
-  </PropertyGroup>
-  <PropertyGroup>
     <ApplicationIcon>Resources\freenet.ico</ApplicationIcon>
-  </PropertyGroup>
-  <PropertyGroup />
-  <PropertyGroup>
     <StartupObject>FreenetTray.Program</StartupObject>
   </PropertyGroup>
-  <PropertyGroup />
-  <ItemGroup>
-    <Reference Include="Costura, Version=1.6.2.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
-      <HintPath>packages\Costura.Fody.1.6.2\lib\portable-net+sl+win+wpa+wp\Costura.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>packages\NLog.4.4.11\lib\net40\NLog.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Browsers\Browser.cs" />
-    <Compile Include="Browsers\BrowserUtil.cs" />
-    <Compile Include="Browsers\Chrome.cs" />
-    <Compile Include="Browsers\Edge.cs" />
-    <Compile Include="Browsers\Firefox.cs" />
-    <Compile Include="Browsers\InternetExplorer.cs" />
-    <Compile Include="Browsers\Opera.cs" />
-    <Compile Include="CommandsMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CommandsMenu.Designer.cs">
-      <DependentUpon>CommandsMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CrashDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CrashDialog.Designer.cs">
-      <DependentUpon>CrashDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MachineConfig.cs" />
-    <Compile Include="NodeController.cs" />
-    <Compile Include="PreferencesWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PreferencesWindow.Designer.cs">
-      <DependentUpon>PreferencesWindow.cs</DependentUpon>
-    </Compile>
-    <Compile Include="strings.fr.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>strings.fr.resx</DependentUpon>
-    </Compile>
-    <Compile Include="strings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>strings.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FNLog.cs" />
-    <EmbeddedResource Include="CommandsMenu.de.resx">
-      <DependentUpon>CommandsMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CommandsMenu.el.resx">
-      <DependentUpon>CommandsMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CommandsMenu.es.resx">
-      <DependentUpon>CommandsMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CommandsMenu.fa-IR.resx">
-      <DependentUpon>CommandsMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CommandsMenu.fi.resx">
-      <DependentUpon>CommandsMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CommandsMenu.fr.resx">
-      <DependentUpon>CommandsMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CommandsMenu.hu.resx">
-      <DependentUpon>CommandsMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CommandsMenu.it.resx">
-      <DependentUpon>CommandsMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CommandsMenu.nl.resx">
-      <DependentUpon>CommandsMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CommandsMenu.pt-BR.resx">
-      <DependentUpon>CommandsMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CommandsMenu.pt-PT.resx">
-      <DependentUpon>CommandsMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CommandsMenu.resx">
-      <DependentUpon>CommandsMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CommandsMenu.zh-CN.resx">
-      <DependentUpon>CommandsMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrashDialog.de.resx">
-      <DependentUpon>CrashDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrashDialog.el.resx">
-      <DependentUpon>CrashDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrashDialog.es.resx">
-      <DependentUpon>CrashDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrashDialog.fa-IR.resx">
-      <DependentUpon>CrashDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrashDialog.fi.resx">
-      <DependentUpon>CrashDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrashDialog.fr.resx">
-      <DependentUpon>CrashDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrashDialog.hu.resx">
-      <DependentUpon>CrashDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrashDialog.it.resx">
-      <DependentUpon>CrashDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrashDialog.nl.resx">
-      <DependentUpon>CrashDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrashDialog.pt-BR.resx">
-      <DependentUpon>CrashDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrashDialog.pt-PT.resx">
-      <DependentUpon>CrashDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrashDialog.resx">
-      <DependentUpon>CrashDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrashDialog.sr.resx">
-      <DependentUpon>CrashDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrashDialog.zh-CN.resx">
-      <DependentUpon>CrashDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PreferencesWindow.de.resx">
-      <DependentUpon>PreferencesWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PreferencesWindow.el.resx">
-      <DependentUpon>PreferencesWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PreferencesWindow.es.resx">
-      <DependentUpon>PreferencesWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PreferencesWindow.fa-IR.resx">
-      <DependentUpon>PreferencesWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PreferencesWindow.fi.resx">
-      <DependentUpon>PreferencesWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PreferencesWindow.fr.resx">
-      <DependentUpon>PreferencesWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PreferencesWindow.hu.resx">
-      <DependentUpon>PreferencesWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PreferencesWindow.it.resx">
-      <DependentUpon>PreferencesWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PreferencesWindow.nl.resx">
-      <DependentUpon>PreferencesWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PreferencesWindow.pt-BR.resx">
-      <DependentUpon>PreferencesWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PreferencesWindow.pt-PT.resx">
-      <DependentUpon>PreferencesWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PreferencesWindow.resx">
-      <DependentUpon>PreferencesWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PreferencesWindow.sr.resx">
-      <DependentUpon>PreferencesWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PreferencesWindow.zh-CN.resx">
-      <DependentUpon>PreferencesWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="strings.de.resx" />
-    <EmbeddedResource Include="strings.el.resx" />
-    <EmbeddedResource Include="strings.es.resx" />
-    <EmbeddedResource Include="strings.fi.resx" />
-    <EmbeddedResource Include="strings.fr.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>strings.fr.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="strings.hu.resx" />
-    <EmbeddedResource Include="strings.it.resx" />
-    <EmbeddedResource Include="strings.nl.resx" />
-    <EmbeddedResource Include="strings.pl.resx" />
-    <EmbeddedResource Include="strings.pt-BR.resx" />
-    <EmbeddedResource Include="strings.pt-PT.resx" />
-    <EmbeddedResource Include="strings.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>strings.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <EmbeddedResource Include="strings.zh-CN.resx" />
-    <None Include="app.config" />
-    <None Include="appveyor.yml" />
-    <None Include="packages.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-  </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
       <Visible>False</Visible>
@@ -309,29 +44,18 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\freenet.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\freenetoffline.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="FodyWeavers.xml" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('packages\Costura.Fody.1.6.2\build\portable-net+sl+win+wpa+wp\Costura.Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Costura.Fody.1.6.2\build\portable-net+sl+win+wpa+wp\Costura.Fody.targets'))" />
-    <Error Condition="!Exists('packages\Fody.2.1.0\build\portable-net+sl+win+wpa+wp\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Fody.2.1.0\build\portable-net+sl+win+wpa+wp\Fody.targets'))" />
-  </Target>
-  <Import Project="packages\Costura.Fody.1.6.2\build\portable-net+sl+win+wpa+wp\Costura.Fody.targets" Condition="Exists('packages\Costura.Fody.1.6.2\build\portable-net+sl+win+wpa+wp\Costura.Fody.targets')" />
-  <Import Project="packages\Fody.2.1.0\build\portable-net+sl+win+wpa+wp\Fody.targets" Condition="Exists('packages\Fody.2.1.0\build\portable-net+sl+win+wpa+wp\Fody.targets')" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+  <ItemGroup>
+    <PackageReference Include="Costura.Fody">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Fody">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="NLog" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" />
+  </ItemGroup>
 </Project>

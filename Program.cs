@@ -17,6 +17,7 @@ namespace FreenetTray
 
             FNLog.Initialize();
 
+            Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new CommandsMenu());
