@@ -50,6 +50,7 @@ namespace CryptaTray
         private void NodeStarted(object sender, EventArgs e)
         {
             RefreshMenu(true);
+            openCryptaMenuItem_Click(sender, e);
         }
 
         private void NodeStopped(object sender, EventArgs e)
