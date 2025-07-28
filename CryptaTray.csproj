@@ -28,7 +28,7 @@
     <ApplicationIcon>Resources\crypta_logo.ico</ApplicationIcon>
     <StartupObject>CryptaTray.Program</StartupObject>
     <PublishSingleFile>true</PublishSingleFile>
-    <PublishSelfContained>true</PublishSelfContained>
+    <PublishSelfContained>false</PublishSelfContained>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <IsPublishable>True</IsPublishable>
