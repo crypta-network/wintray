@@ -56,9 +56,9 @@ namespace CryptaTray
         public static string WrapperFilename() {
             switch (MachineConfig.GetBestAvailableJRE) {
                 case JREType.JRE64Bit:
-                    return @"wrapper\freenetwrapper-64.exe";
+                    return @"wrapper\cryptawrapper-64.exe";
                 case JREType.JRE32Bit:
-                    return @"wrapper\freenetwrapper.exe";
+                    return @"wrapper\cryptawrapper.exe";
                 case JREType.None:
                     // there is no JRE installed at all
                     throw new MissingJRE();
