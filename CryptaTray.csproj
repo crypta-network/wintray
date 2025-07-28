@@ -24,12 +24,17 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <UseWindowsForms>true</UseWindowsForms>
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
-    <ManifestCertificateThumbprint>BEC4471BC14AD0058E27A9B0B569F11889D11A17</ManifestCertificateThumbprint>
-    <ManifestKeyFile>CryptaTray_TemporaryKey.pfx</ManifestKeyFile>
-    <GenerateManifests>true</GenerateManifests>
     <SignManifests>false</SignManifests>
     <ApplicationIcon>Resources\crypta_logo.ico</ApplicationIcon>
     <StartupObject>CryptaTray.Program</StartupObject>
+    <PublishSingleFile>true</PublishSingleFile>
+    <PublishSelfContained>false</PublishSelfContained>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <IsPublishable>True</IsPublishable>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <IsPublishable>True</IsPublishable>
   </PropertyGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -48,14 +53,6 @@
     <Content Include="Resources\crypta_logo.ico" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Costura.Fody">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Fody">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
     <PackageReference Include="NLog" />
     <PackageReference Include="System.Configuration.ConfigurationManager" />
   </ItemGroup>
