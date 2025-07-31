@@ -49,6 +49,9 @@ jobs:
       RUNTIME_IDENTIFIER: ${{ matrix.os == 'windows-latest' && 'x64' || 'arm64'}}
 
     steps:
+      - name: Echo RUNTIME_IDENTIFIER
+        run: echo "RUNTIME_IDENTIFIER = $RUNTIME_IDENTIFIER"
+
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -63,7 +66,7 @@ jobs:
         uses: microsoft/setup-msbuild@v2
 
       - name: Build and publish
-        run: dotnet publish -c Release -r win-$RUNTIME_IDENTIFIER
+        run: dotnet publish -c Release -r win-${{ env.RUNTIME_IDENTIFIER }}
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
