@@ -37,6 +37,10 @@ on:
       git_ref:
         type: string
         default: master
+    outputs:
+      artifact-map:
+        description: The artifact-id for built x64 wintray
+        value: ${{ jobs.collect-artifacts.outputs.artifact-map }}
 
 jobs:
   build:
@@ -72,7 +76,38 @@ jobs:
         run: dotnet publish -c Release -r win-${{ env.RUNTIME_IDENTIFIER }}
 
       - name: Upload build artifacts
+        id: upload-artifact
         uses: actions/upload-artifact@v4
         with:
           name: artifact-${{ env.RUNTIME_IDENTIFIER }}
           path: ${{ github.workspace }}\bin\Release\net9.0-windows\win-${{ env.RUNTIME_IDENTIFIER }}\publish
+
+  collect-artifacts:
+    needs: build
+    runs-on: ubuntu-latest
+    outputs:
+      # Expose the map as a job-level output
+      artifact-map: ${{ steps.make-map.outputs.artifact-map }}
+    steps:
+      - name: List and map artifacts
+        id: make-map
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const core = require('@actions/core');
+            // 1. Fetch all artifacts for this run
+            const res = await github.rest.actions.listWorkflowRunArtifacts({
+              owner: context.repo.owner,
+              repo:  'wintray',
+              run_id: context.runId
+            });
+            // 2. Reduce into { artifactName: id, … }
+            const map = res.data.artifacts.reduce((acc, a) => {
+              acc[a.name] = a.id;
+              return acc;
+            }, {});
+            // 3. Output the JSON string
+            const mapString = JSON.stringify(map);
+            core.setOutput('artifact-map', mapString);
+            core.debug(`Artifact map: ${mapString}`);
+            
