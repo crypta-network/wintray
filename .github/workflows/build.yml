@@ -34,7 +34,7 @@ name: Build CryptaWintray.exe
 on:
   workflow_call:
     inputs:
-      git_ref:
+      git-ref:
         type: string
         default: master
     outputs:
@@ -62,7 +62,7 @@ jobs:
         with:
           fetch-depth: 0
           repository: 'crypta-network/wintray'
-          ref: ${{ inputs.git_ref }}
+          ref: ${{ inputs.git-ref }}
 
       - name: Install .NET Core
         uses: actions/setup-dotnet@v4
