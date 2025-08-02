@@ -79,7 +79,7 @@ jobs:
         id: upload-artifact
         uses: actions/upload-artifact@v4
         with:
-          name: artifact-${{ env.RUNTIME_IDENTIFIER }}
+          name: wintray-${{ env.RUNTIME_IDENTIFIER }}
           path: ${{ github.workspace }}\bin\Release\net9.0-windows\win-${{ env.RUNTIME_IDENTIFIER }}\publish
 
   collect-artifacts:
@@ -97,7 +97,7 @@ jobs:
             // 1. Fetch all artifacts for this run
             const res = await github.rest.actions.listWorkflowRunArtifacts({
               owner: context.repo.owner,
-              repo:  'wintray',
+              repo:  context.repo.repo,
               run_id: context.runId
             });
             // 2. Reduce into { artifactName: id, … }
