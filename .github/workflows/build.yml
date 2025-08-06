@@ -106,7 +106,7 @@ jobs:
               return acc;
             }, {});
             // 3. Output the JSON string
-            const mapString = JSON.stringify(map);
+            const mapString = toJSON(map);
             core.setOutput('artifact-map', mapString);
             core.debug(`Artifact map: ${mapString}`);
             
